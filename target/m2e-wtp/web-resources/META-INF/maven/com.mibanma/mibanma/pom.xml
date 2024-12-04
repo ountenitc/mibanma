@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.10</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+	<groupId>com.mibanma</groupId>
+	<artifactId>mibanma</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>minimbaore</name>
+	<packaging>war</packaging>
+    
+	<description>API de traduction et de génération des audios</description>
+	<properties>
+    	<!--<voicersstts-systemPath>E:\DEVSPRINGBOOT\mibanma\libs/voicerss_tts.jar</voicersstts-systemPath> -->
+		<!--<voicersstts-systemPath>https://rigo.rigofaso.com/download/springbootlibs/voicerss_tts.jar</voicersstts-systemPath>-->
+		<java.version>17</java.version>
+		<spring-cloud-gcp.version>5.3.0</spring-cloud-gcp.version>
+		<spring-cloud.version>2023.0.1</spring-cloud.version>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	<dependencies>
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+		
+		<dependency>
+    		<groupId>com.voicerss</groupId>
+    		<artifactId>voicerss-tts</artifactId>
+    		<version>1.0</version>
+		</dependency>
+		
+		<!--<dependency>
+    		<groupId>com.voicerss</groupId>
+    		<artifactId>voicerss_tts</artifactId>
+    		<version>1.0.0</version>
+    		<scope>system</scope>
+   			 <systemPath>${voicersstts-systemPath}</systemPath> 
+   			 <systemPath>${project.basedir}/libs/voicerss.jar</systemPath>   			 
+		</dependency>-->
+
+
+														    <!-- Spring Cloud GCP Starter
+														    <dependency>
+																<groupId>com.google.cloud</groupId>
+																<artifactId>spring-cloud-gcp-starter</artifactId>
+															</dependency> 
+														    <dependency>
+												   				<groupId>org.springframework.boot</groupId>
+												   				<artifactId>spring-boot-starter-tomcat</artifactId>
+												   				<scope>provided</scope>
+															</dependency>
+														    <dependency>
+														        <groupId>org.springframework.cloud</groupId>
+														        <artifactId>spring-cloud-gcp-starter</artifactId>
+														    </dependency>
+
+														     Spring Cloud GCP Core 
+														    <dependency>
+														        <groupId>org.springframework.cloud</groupId>
+														        <artifactId>spring-cloud-gcp-core</artifactId>
+														        <version>1.2.8.RELEASE</version>
+														    </dependency>
+
+														    Google Cloud Storage Client Library 
+														    <dependency>
+														        <groupId>com.google.cloud</groupId>
+														        <artifactId>google-cloud-storage</artifactId>
+														        
+														    </dependency>-->
+
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+            <groupId>javax.xml</groupId>
+            <artifactId>webservices-api</artifactId>
+            <version>2.1-b16</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <type>jar</type>
+        </dependency>
+              
+
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+<!--<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>    
+</dependency>
+ https://mvnrepository.com/artifact/org.threeten/threetenbp 
+<dependency>
+    <groupId>org.threeten</groupId>
+    <artifactId>threetenbp</artifactId>
+    <version>1.3.6</version>
+</dependency>
+ https://mvnrepository.com/artifact/com.google.http-client/google-http-client 
+<dependency>
+    <groupId>com.google.http-client</groupId>
+    <artifactId>google-http-client</artifactId>    
+</dependency>-->
+        
+													        <!--<dependency>
+													   			<groupId>com.google.cloud</groupId>
+													   			<artifactId>google-cloud-texttospeech</artifactId>
+													 		</dependency>-->
+<!-- 		<dependency>  -->
+<!--    		<groupId>junit</groupId>  -->
+<!--    		<artifactId>junit</artifactId>  -->
+<!--    		<version>3.8.1</version>  -->
+<!--    		<scope>test</scope>  -->
+<!--   		</dependency>  -->
+ 		<dependency>
+            <groupId>javazoom</groupId>
+            <artifactId>jlayer</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <!--<dependency>
+   			<groupId>com.google.cloud</groupId>
+   			<artifactId>google-cloud-apikeys</artifactId>
+ 		</dependency>-->
+        <dependency>
+		    <groupId>com.github.paulcwarren</groupId>
+		    <artifactId>content-fs-spring-boot-starter</artifactId>
+		    <version>0.6.0</version>
+		</dependency>
+<!-- REST API -->
+<dependency>
+    <groupId>com.github.paulcwarren</groupId>
+    <artifactId>spring-content-rest-boot-starter</artifactId>
+    <version>0.6.0</version>
+</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+																	<!--<dependency>
+																		<groupId>com.google.cloud</groupId>
+																		<artifactId>spring-cloud-gcp-dependencies</artifactId>
+																		<version>${spring-cloud-gcp.version}</version>
+																		<type>pom</type>
+																		<scope>import</scope>
+																	</dependency>
+																	<dependency>
+																		<groupId>org.springframework.cloud</groupId>
+																		<artifactId>spring-cloud-gcp-starter</artifactId>
+																		<version>1.2.8.RELEASE</version>
+																	</dependency>-->
+			<!--<dependency>
+      			<groupId>com.google.cloud</groupId>
+      			<artifactId>libraries-bom</artifactId>
+      			<version>  26.41.0</version>
+      			<type>pom</type>
+      			<scope>import</scope>
+   			</dependency>-->
+			
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>                	
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>mibanma</finalName>
+	</build>
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>
